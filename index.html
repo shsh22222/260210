@@ -98,6 +98,77 @@
       </header>
 
       <main class="main">
+        <section class="dashboard">
+          <div class="section-header">
+            <div>
+              <h2>機能ダッシュボード</h2>
+              <p>学習定着・実践・共有をワンストップで確認できます。</p>
+            </div>
+            <div class="dashboard-actions">
+              <button class="ghost" data-export="summary">週次サマリを書き出し</button>
+              <button class="primary" data-copy="share">上司に共有リンク</button>
+            </div>
+          </div>
+          <div class="dashboard-grid">
+            <article class="dashboard-card">
+              <h3>今日の達成</h3>
+              <div class="achievement">
+                <div class="gauge">
+                  <span>72%</span>
+                  <p>目標達成率</p>
+                </div>
+                <div class="gauge-meta">
+                  <div>
+                    <strong>5 / 7</strong>
+                    <span>本日の実践</span>
+                  </div>
+                  <div>
+                    <strong>+12</strong>
+                    <span>週間成長</span>
+                  </div>
+                </div>
+              </div>
+              <div class="badge-row">
+                <span class="tag">継続 5日</span>
+                <span class="tag">投稿 12件</span>
+                <span class="tag">評価 A</span>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <h3>フォローアップ状況</h3>
+              <ul class="status-list">
+                <li>
+                  <span>メンターコメント</span>
+                  <strong>2件</strong>
+                </li>
+                <li>
+                  <span>未読フィードバック</span>
+                  <strong>1件</strong>
+                </li>
+                <li>
+                  <span>次のレビュー</span>
+                  <strong>金曜 16:00</strong>
+                </li>
+              </ul>
+              <button class="ghost full">レビュー準備を開く</button>
+            </article>
+            <article class="dashboard-card accent">
+              <h3>共有・エクスポート</h3>
+              <p>
+                進捗サマリをCSV/画像で書き出して、上司やチームにすぐ共有できます。
+              </p>
+              <div class="export-actions">
+                <button class="ghost" data-export="csv">CSV出力</button>
+                <button class="ghost" data-export="report">週次レポート</button>
+                <button class="primary" data-copy="share">リンクをコピー</button>
+              </div>
+              <p class="muted">
+                最新更新: 2024/02/10 09:30
+              </p>
+            </article>
+          </div>
+        </section>
+
         <section class="timeline">
           <div class="section-header">
             <div>
@@ -498,6 +569,7 @@
       </div>
       <button class="primary" data-scroll="checkin">今すぐ入力</button>
     </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
   </body>
 </html>
