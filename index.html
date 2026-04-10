@@ -2,303 +2,219 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>研修フォローアップ | 定着を加速するトレーニングOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a1036" />
+    <title>両利きの魔導書 | 学習RPG</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div class="stars" aria-hidden="true"></div>
     <div class="app">
-      <header class="hero">
-        <nav class="nav">
-          <div class="logo">
-            <span class="logo-mark">SF</span>
-            SparkFollow
-          </div>
-          <div class="nav-actions">
-            <button class="ghost">ダッシュボード</button>
-            <button class="primary">新規チェックイン</button>
-          </div>
-        </nav>
-        <div class="hero-content">
-          <div>
-            <p class="badge">研修の定着を加速</p>
-            <h1>
-              研修フォローアップを
-              <span>成果に変える</span>
-            </h1>
-            <p class="lead">
-              学んだことを「実践」へ。定着度と実践回数を可視化し、毎日の行動につなげる
-              ためのスマホ最適化フォローアップアプリです。
-            </p>
-            <div class="hero-actions">
-              <button class="primary">今日のチェックイン</button>
-              <button class="ghost">使い方を見る</button>
-            </div>
-            <div class="hero-stats">
-              <div>
-                <h2>92%</h2>
-                <p>定着プラン達成率</p>
-              </div>
-              <div>
-                <h2>3.6x</h2>
-                <p>実践アクション数</p>
-              </div>
-              <div>
-                <h2>14日</h2>
-                <p>習慣化までの平均</p>
-              </div>
-            </div>
-          </div>
-          <div class="hero-panel">
-            <div class="panel-header">
-              <h3>今日のフォローアップ</h3>
-              <span class="status">集中モード</span>
-            </div>
-            <div class="panel-body">
-              <div class="panel-avatar">
-                <div class="avatar-stack">
-                  <span>AY</span>
-                  <span>MR</span>
-                  <span>KT</span>
-                </div>
-                <p>メンターが待機中。今日の投稿にコメントが届きます。</p>
-              </div>
-              <div class="meter">
-                <div class="meter-label">
-                  <span>定着スコア</span>
-                  <strong>78</strong>
-                </div>
-                <div class="meter-bar">
-                  <span style="width: 78%"></span>
-                </div>
-              </div>
-              <div class="meter">
-                <div class="meter-label">
-                  <span>実践回数</span>
-                  <strong>12 / 20</strong>
-                </div>
-                <div class="meter-bar light">
-                  <span style="width: 60%"></span>
-                </div>
-              </div>
-              <div class="panel-card">
-                <p>次のアクション</p>
-                <h4>「顧客ヒアリングの型」を1件試す</h4>
-                <button class="primary full">完了を記録</button>
-              </div>
-            </div>
-          </div>
+      <!-- ========== TOP HEADER ========== -->
+      <header class="top-bar">
+        <button class="icon-btn" id="btnBack" aria-label="戻る" hidden>◀</button>
+        <div class="top-title">
+          <div class="title-main">両利きの魔導書</div>
+          <div class="title-sub">Ambidextrous Grimoire</div>
         </div>
+        <button class="icon-btn" id="btnReset" aria-label="リセット">↻</button>
       </header>
 
-      <main class="main">
-        <section class="timeline">
-          <div class="section-header">
-            <div>
-              <h2>定着を作る3ステップ</h2>
-              <p>迷わず進めるための、今日やることを明確に。</p>
-            </div>
+      <!-- ========== SCREEN: TITLE / MENU ========== -->
+      <section class="screen active" id="screen-title">
+        <div class="sage-frame">
+          <div class="sage-avatar">
+            <div class="orb"></div>
+            <span class="sage-label">賢者アルカナ</span>
           </div>
-          <div class="timeline-grid">
-            <article class="timeline-card">
-              <div class="step">Step 1</div>
-              <h3>ミニリマインド</h3>
-              <p>研修内容を1分で振り返り、重要ポイントだけを復習。</p>
-              <span class="tag">所要 3分</span>
-            </article>
-            <article class="timeline-card">
-              <div class="step">Step 2</div>
-              <h3>実践ログ</h3>
-              <p>現場で使ったシーンを即記録。音声入力もOK。</p>
-              <span class="tag">スマホ最適</span>
-            </article>
-            <article class="timeline-card">
-              <div class="step">Step 3</div>
-              <h3>フィードバック</h3>
-              <p>メンターからのコメントで次の行動が明確に。</p>
-              <span class="tag">即時共有</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="grid">
-          <article class="card">
-            <h3>研修内容の定着チェック</h3>
+          <div class="sage-bubble">
+            <p>よくぞ来られた、<span class="hl">若き魔法使い</span>よ。</p>
             <p>
-              重要ポイントを3分でリマインド。理解度をサクッと自己評価し、次に
-              伸ばすポイントが明確になります。
+              わしは賢者アルカナ——この魔導書の世界で、<b>AI（魔法陣）</b>と<b>HI（人間の意志）</b>を操る
+              <em>二刀流魔法陣</em>の術を伝える者じゃ。
             </p>
-            <div class="pill-group">
-              <span>理解度</span>
-              <span>応用度</span>
-              <span>現場適用</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>実践ログ &amp; フィードバック</h3>
-            <p>
-              スマホで素早く記録し、リアルタイムで上司からのフィードバックを受け取れ
-              ます。
-            </p>
-            <div class="feedback">
-              <div>
-                <strong>今日の学び</strong>
-                <span>顧客の課題整理が早くなった</span>
-              </div>
-              <button class="ghost">共有する</button>
-            </div>
-            <div class="feedback-score">
-              <span>定着スコア</span>
-              <strong>+6</strong>
-              <span class="muted">前週比</span>
-            </div>
-          </article>
-          <article class="card accent">
-            <h3>定着プラン</h3>
-            <p>
-              研修後30日間を自動設計。集中・反復・振り返りのリズムで行動化。
-            </p>
-            <ul>
-              <li>週3回のミニ演習</li>
-              <li>毎週の振り返り5分</li>
-              <li>メンターからの週次レビュー</li>
-            </ul>
-            <div class="progress">
-              <div>
-                <span>達成率</span>
-                <strong>68%</strong>
-              </div>
-              <div class="progress-bar">
-                <span style="width: 68%"></span>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section class="form-section" id="checkin">
-          <div class="section-header">
-            <div>
-              <h2>チェックインを送信</h2>
-              <p>スマホで1分。学びをアウトプットして、定着を加速させましょう。</p>
-            </div>
-            <button class="ghost">テンプレートを選択</button>
+            <p>さあ、どの扉から旅を始めるのじゃ？</p>
           </div>
-          <form class="checkin-form">
-            <label>
-              今日の実践
-              <textarea placeholder="今日試したこと、現場で使ったことを入力"></textarea>
-            </label>
-            <label class="voice-toggle">
-              <input type="checkbox" />
-              音声入力モードを使う
-            </label>
-            <div class="row">
-              <label>
-                定着度
-                <input type="range" min="0" max="100" value="78" />
-              </label>
-              <label>
-                実践回数
-                <input type="number" value="2" min="0" max="10" />
-              </label>
-            </div>
-            <div class="row">
-              <label>
-                今日の手応え
-                <select>
-                  <option>とても良い</option>
-                  <option>良い</option>
-                  <option selected>普通</option>
-                  <option>改善したい</option>
-                </select>
-              </label>
-              <label>
-                フィードバック希望
-                <select>
-                  <option selected>メンターから欲しい</option>
-                  <option>チームから欲しい</option>
-                  <option>今回は不要</option>
-                </select>
-              </label>
-            </div>
-            <label>
-              ひとこと振り返り
-              <input type="text" placeholder="次に試したいことや学び" />
-            </label>
-            <button class="primary full" type="submit">チェックインを送信</button>
-          </form>
-        </section>
-
-        <section class="coach">
-          <div>
-            <h2>AIコーチからの今週の提案</h2>
-            <p>あなたの行動データから、最も効果的な次の一手を提示します。</p>
-          </div>
-          <div class="coach-cards">
-            <article>
-              <h3>明日の実践テーマ</h3>
-              <p>「課題の言語化」を意識し、ヒアリングシートを1枚更新。</p>
-              <span class="tag">難易度: ★★☆</span>
-            </article>
-            <article>
-              <h3>推奨アウトプット</h3>
-              <p>学びを60秒でまとめてチームに共有。</p>
-              <span class="tag">所要 5分</span>
-            </article>
-            <article>
-              <h3>振り返り質問</h3>
-              <p>「今日の行動で最も成果に近づいたことは？」</p>
-              <span class="tag">集中ポイント</span>
-            </article>
-          </div>
-        </section>
-
-        <section class="insights">
-          <div class="insight-card">
-            <h3>定着のボトルネック</h3>
-            <p>理解は高いが実践回数が不足しています。</p>
-            <div class="chips">
-              <span>時間確保</span>
-              <span>フィードバック</span>
-              <span>振り返り</span>
-            </div>
-          </div>
-          <div class="insight-card">
-            <h3>次のおすすめ</h3>
-            <ol>
-              <li>毎朝3分で「ミニリマインド」を実施</li>
-              <li>週1回、ペアでロールプレイ</li>
-              <li>明日までに1件アウトプット投稿</li>
-            </ol>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div>
-          <h4>SparkFollow</h4>
-          <p>研修を成果につなげるフォローアップOS</p>
         </div>
-        <div class="footer-links">
-          <a href="#">サポート</a>
-          <a href="#">成功事例</a>
-          <a href="#">プライバシー</a>
+
+        <div class="rank-card" id="rankCard">
+          <div class="rank-label">現在のランク</div>
+          <div class="rank-name" id="rankName">見習い魔法使い</div>
+          <div class="mini-stats" id="miniStats"></div>
         </div>
-      </footer>
+
+        <nav class="menu">
+          <button class="menu-btn" data-go="screen-diagnosis-intro">
+            <span class="menu-icon">🔮</span>
+            <span class="menu-text">
+              <b>診断する</b>
+              <small>魔力測定の水晶球</small>
+            </span>
+          </button>
+          <button class="menu-btn" data-go="screen-case-select">
+            <span class="menu-icon">⚔️</span>
+            <span class="menu-text">
+              <b>術式修行</b>
+              <small>ケース学習の物語</small>
+            </span>
+          </button>
+          <button class="menu-btn" data-go="screen-ssc-intro">
+            <span class="menu-icon">📜</span>
+            <span class="menu-text">
+              <b>誓いを立てる</b>
+              <small>冒険の誓い（SSC宣言）</small>
+            </span>
+          </button>
+          <button class="menu-btn" data-go="screen-levelup">
+            <span class="menu-icon">🌟</span>
+            <span class="menu-text">
+              <b>成長を確認する</b>
+              <small>覚醒の軌跡</small>
+            </span>
+          </button>
+        </nav>
+      </section>
+
+      <!-- ========== SCREEN: DIAGNOSIS INTRO ========== -->
+      <section class="screen" id="screen-diagnosis-intro">
+        <h2 class="screen-title">🔮 魔力測定の水晶球</h2>
+        <div class="sage-bubble stand-alone">
+          <p>
+            旅人よ、これよりそなたの<b>四元の術式</b>を測る。
+          </p>
+          <p>
+            7つの問いに、心のままに答えるがよい。偽りは水晶球に映るゆえに、な。
+          </p>
+        </div>
+        <div class="four-elements">
+          <div class="elem"><span>①</span>目的定義力</div>
+          <div class="elem"><span>②</span>設計力</div>
+          <div class="elem"><span>③</span>AI/HI判断力</div>
+          <div class="elem"><span>④</span>振り返り力</div>
+        </div>
+        <button class="primary-btn" id="startDiagnosis">水晶球を覗く</button>
+      </section>
+
+      <!-- ========== SCREEN: DIAGNOSIS QUESTIONS ========== -->
+      <section class="screen" id="screen-diagnosis-q">
+        <div class="progress">
+          <div class="progress-bar"><span id="diagBar"></span></div>
+          <div class="progress-text"><span id="diagStep">1</span> / <span id="diagTotal">7</span></div>
+        </div>
+        <div class="question-card">
+          <div class="question-num" id="qNum">問い 一</div>
+          <p class="question-text" id="qText">—</p>
+          <div class="scale-legend">
+            <span>全くあてはまらない</span>
+            <span>とてもあてはまる</span>
+          </div>
+          <div class="scale" id="scaleBtns">
+            <button data-val="1">1</button>
+            <button data-val="2">2</button>
+            <button data-val="3">3</button>
+            <button data-val="4">4</button>
+            <button data-val="5">5</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SCREEN: DIAGNOSIS RESULT ========== -->
+      <section class="screen" id="screen-diagnosis-result">
+        <h2 class="screen-title">✨ 水晶球の託宣</h2>
+        <div class="result-rank">
+          <div class="result-rank-name" id="resultRank">見習い魔法使い</div>
+          <div class="result-rank-sub">そなたの現在のランクじゃ</div>
+        </div>
+        <div class="stats" id="statsList"></div>
+        <div class="sage-bubble stand-alone" id="diagNarrative"></div>
+        <div class="next-case" id="nextCaseBox">
+          <div class="nc-label">次に挑むべき術式</div>
+          <div class="nc-title" id="nextCaseTitle">—</div>
+          <button class="primary-btn" id="goRecommendedCase">この修行に挑む</button>
+        </div>
+        <button class="ghost-btn" data-go="screen-title">魔導書の扉に戻る</button>
+      </section>
+
+      <!-- ========== SCREEN: CASE SELECT ========== -->
+      <section class="screen" id="screen-case-select">
+        <h2 class="screen-title">⚔️ 術式修行の書架</h2>
+        <p class="screen-desc">挑むべき物語を選ぶがよい、旅人よ。</p>
+        <div class="case-list" id="caseList"></div>
+        <button class="ghost-btn" data-go="screen-title">扉に戻る</button>
+      </section>
+
+      <!-- ========== SCREEN: CASE STORY ========== -->
+      <section class="screen" id="screen-case">
+        <div class="case-header">
+          <div class="case-tag" id="caseTag">術式</div>
+          <h2 class="screen-title" id="caseTitle">—</h2>
+        </div>
+        <div class="dialog-log" id="dialogLog"></div>
+        <div class="answer-area" id="answerArea">
+          <textarea id="answerInput" placeholder="そなたの答えを、ここに刻むがよい..." rows="3"></textarea>
+          <button class="primary-btn" id="submitAnswer">答えを唱える</button>
+        </div>
+      </section>
+
+      <!-- ========== SCREEN: SSC INTRO ========== -->
+      <section class="screen" id="screen-ssc-intro">
+        <h2 class="screen-title">📜 冒険の誓い</h2>
+        <div class="sage-bubble stand-alone">
+          <p>
+            修行の終わりに、<b>誓い</b>を立てるのじゃ。
+          </p>
+          <p>
+            明日から唱える術式、封印する古き呪文、磨き続ける得意魔法——
+            この三つを、魔導書に刻もうぞ。
+          </p>
+        </div>
+        <form class="ssc-form" id="sscForm">
+          <label>
+            <span class="ssc-ico">✨</span>
+            <b>Start</b>：明日から唱える新しい術式
+            <textarea name="start" rows="2" placeholder="例：会議の冒頭で必ず目的を確認する" required></textarea>
+          </label>
+          <label>
+            <span class="ssc-ico">🚫</span>
+            <b>Stop</b>：封印する古い呪文
+            <textarea name="stop" rows="2" placeholder="例：AIの提案をそのまま採用すること" required></textarea>
+          </label>
+          <label>
+            <span class="ssc-ico">🔥</span>
+            <b>Continue</b>：磨き続ける得意魔法
+            <textarea name="continue" rows="2" placeholder="例：週末の内省ノート" required></textarea>
+          </label>
+          <button class="primary-btn" type="submit">誓いを刻む</button>
+        </form>
+      </section>
+
+      <!-- ========== SCREEN: SSC RESULT ========== -->
+      <section class="screen" id="screen-ssc-result">
+        <h2 class="screen-title">⚡ 誓いの読み上げ</h2>
+        <div class="scroll-paper" id="sscScroll"></div>
+        <div class="stat-impact" id="statImpact"></div>
+        <div class="next-case">
+          <div class="nc-label">次の冒険</div>
+          <div class="nc-title" id="sscNextCaseTitle">—</div>
+          <button class="primary-btn" id="sscGoNext">この修行に挑む</button>
+        </div>
+        <button class="ghost-btn" data-go="screen-title">扉に戻る</button>
+      </section>
+
+      <!-- ========== SCREEN: LEVEL UP ========== -->
+      <section class="screen" id="screen-levelup">
+        <h2 class="screen-title">🌟 覚醒の軌跡</h2>
+        <div id="levelupBody"></div>
+        <button class="ghost-btn" data-go="screen-title">扉に戻る</button>
+      </section>
     </div>
-    <div class="mobile-bar">
-      <div>
-        <strong>今日のチェックイン</strong>
-        <span>1分で完了</span>
-      </div>
-      <button class="primary" data-scroll="checkin">今すぐ入力</button>
-    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
